@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Radomir Tinkov - Gilroy-Medium';
+  src: url(./Radomir+Tinkov+-+Gilroy-Medium.eot);
+  src: url(./Radomir+Tinkov+-+Gilroy-Medium.eot?#iefix) format('embedded-opentype'),
+       url(./Radomir+Tinkov+-+Gilroy-Medium.otf) format('otf'),
+       url(./Radomir+Tinkov+-+Gilroy-Medium.svg#Radomir%20Tinkov%20-%20Gilroy-Medium) format('svg'),
+       url(./Radomir+Tinkov+-+Gilroy-Medium.ttf) format('truetype'),
+       url(./Radomir+Tinkov+-+Gilroy-Medium.woff) format('woff'),
+       url(./Radomir+Tinkov+-+Gilroy-Medium.woff2) format('woff2');
+}

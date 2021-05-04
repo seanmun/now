@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; background: #abaaaa; margin: 0 auto; padding: 0; height: 100%; width: 100%;">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+      <meta name="x-apple-disable-message-reformatting">
+          <link rel="stylesheet" type="text/css" href="/assets/notifications/styles.css">
+
+      <title>Thank you for your order {{ order_name }} </title>
+      <!--[if mso]>
+      <o:OfficeDocumentSettings>
+         <o:AllowPNG/>
+         <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+      <style type=”text/css”>
+         sup {
+         font-size: 100% !important;
+         }
+         body, td, p, a {
+         font-family: Arial, Helvetica, sans-serif !important;
+         }
+         .ExternalClass * { 
+         line-height: 100%;
+         padding: 0px;
+         margin: 0px;
+         }
+         v\:* {
+         behavior: url(#default#VML);
+         display: inline-block;
+         }
+      </style>
+      <![endif]--> 
+
+      <style>
+
+@font-face {
+          font-family: 'Montserrat';
+          src: url(./Fonts/Monsterrat/Montserrat-SemiBold.eot);
+          src: url(./Fonts/Monsterrat/Montserrat-SemiBold.eot?#iefix) format('embedded-opentype'),
+              url(./Fonts/Monsterrat/Montserrat-SemiBold.otf) format('otf'),
+              url(./Fonts/Monsterrat/Montserrat-SemiBold.svg#Montserrat-SemiBold) format('svg'),
+              url(./Fonts/Monsterrat/Montserrat-SemiBold.ttf) format('truetype'),
+              url(./Fonts/Monsterrat/Montserrat-SemiBold.woff) format('woff'),
+              url(./Fonts/Monsterrat/Montserrat-SemiBold.woff2) format('woff2');
+        }
+
+a:hover {
+  opacity: 0.7 !important;
+}
+
+@font-face {
+        font-family: 'Radomir';
+        src: url(./Fonts/Radomir/Radomir+Tinkov+-+Gilroy-Medium.eot);
+        src: url(./Fonts/Radomir/Radomir+Tinkov+-+Gilroy-Medium.eot?#iefix) format('embedded-opentype'),
+            url(./Fonts/Radomir/Radomir+Tinkov+-+Gilroy-Medium.otf) format('otf'),
+            url(./Fonts/Radomir/Radomir+Tinkov+-+Gilroy-Medium.svg#Radomir%20Tinkov%20-%20Gilroy-Medium) format('svg'),
+            url(./Fonts/Radomir/Radomir+Tinkov+-+Gilroy-Medium.ttf) format('truetype'),
+            url(./Fonts/Radomir/Radomir+Tinkov+-+Gilroy-Medium.woff) format('woff'),
+            url(./Fonts/Radomir/Radomir+Tinkov+-+Gilroy-Medium.woff2) format('woff2');
+      }
+
+@media only screen and (max-width:600px) {
+  .mobile {
+    display: block!important;
+    width: 100%!important;
+    max-height: inherit!important;
+    overflow: visible!important;
+    float: none!important;
+  }
+
+  .desktop {
+    display: none!important;
+    width: 0!important;
+    height: 0!important;
+    mso-hide: all;
+    font-size: 0;
+  }
+
+  .hidemobile {
+    display: none!important;
+    width: 0!important;
+    height: 0!important;
+  }
+
+  .full {
+    width: 100%!important;
+    float: none!important;
+    display: block!important;
+    margin-right: auto!important;
+    margin-left: auto!important;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    text-align: center!important;
+    padding-top: 10px!important;
+    padding-bottom: 10px!important;
+  }
+
+  .full0 {
+    width: 100%!important;
+    float: none!important;
+    display: block!important;
+    margin-right: auto!important;
+    margin-left: auto!important;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    text-align: center!important;
+  }
+
+  .mobile-center {
+    margin-left: auto!important;
+    margin-right: auto!important;
+    display: table!important;
+  }
+
+  .fluid {
+    width: 100%!important;
+  }
+
+  .mleft {
+    text-align: left!important;
+  }
+
+  .mLeft {
+    text-align: left !important;
+  }
+
+  .mCenter {
+    text-align: center!important;
+  }
+
+  .mRight {
+    text-align: right!important;
+  }
+
+  .box25 {
+    padding: 25px 15px!important;
+  }
+
+  .box30 {
+    padding: 30px 20px!important;
+  }
+
+  .box50 {
+    padding: 50px 40px!important;
+  }
+
+  .gutter25 {
+    padding-left: 25px!important;
+    padding-right: 25px!important;
+  }
+
+  .gutter30 {
+    padding-left: 30px!important;
+    padding-right: 30px!important;
+  }
+
+  .gutter50 {
+    padding-left: 30px!important;
+    padding-right: 30px!important;
+  }
+
+  .gutter75 {
+    padding-left: 30px!important;
+    padding-right: 30px!important;
+  }
+
+  .gutter85 {
+    padding-left: 30px!important;
+    padding-right: 30px!important;
+  }
+
+  .col3-pad {
+    padding: 25px!important;
+    width: 100%;
+  }
+
+  .col3-container {
+    width: 100%!important;
+    display: block!important;
+    max-width: 320px!important;
+    Margin: auto!important;
+    padding: 3px 0!important;
+  }
+
+  #email-container {
+    margin-top: 0px!important;
+  }
+
+  .btn {
+    max-width: 280px!important;
+  }
+
+  .combineL {
+    width: 40px!important;
+    display: table-cell!important;
+    text-align: left!important;
+  }
+
+  .combineR {
+    width: 150px!important;
+    display: table-cell!important;
+    text-align: left!important;
+  }
+
+  .itemImg {
+    width: 100px!important;
+  }
+
+  .bestseller-combineL {
+    width: 100px!important;
+    display: table-cell!important;
+    text-align: left!important;
+  }
+
+  .bestseller-combineR {
+    width: 200px!important;
+    display: table-cell!important;
+    text-align: left!important;
+    padding-left: 20px !important;
+  }
+
+  .m-f10 {
+    font-size: 10px!important;
+  }
+
+  .m-f12 {
+    font-size: 12px!important;
+  }
+
+  .m-f14 {
+    font-size: 14px!important;
+  }
+
+  .m-f16 {
+    font-size: 16px!important;
+  }
+
+  .m-f18 {
+    font-size: 18px!important;
+  }
+
+  .m-f20 {
+    font-size: 20px!important;
+  }
+
+  .m-f24 {
+    font-size: 24px!important;
+  }
+
+  .m-f25 {
+    font-size: 25px!important;
+  }
+
+  .m-f30 {
+    font-size: 30px!important;
+  }
+
+  .m-f40 {
+    font-size: 40px!important;
+  }
+
+  .m-f50 {
+    font-size: 50px!important;
+  }
+
+  .m-f56 {
+    font-size: 56px!important;
+  }
+
+  .m-h16 {
+    line-height: 16px!important;
+  }
+
+  .m-h18 {
+    line-height: 18px!important;
+  }
+
+  .m-h20 {
+    line-height: 20px!important;
+  }
+
+  .m-h22 {
+    line-height: 22px!important;
+  }
+
+  .m-h24 {
+    line-height: 24px!important;
+  }
+
+  .m-h26 {
+    line-height: 26px!important;
+  }
+
+  .m-h34 {
+    line-height: 34px!important;
+  }
+
+  .m-h36 {
+    line-height: 36px!important;
+  }
+
+  .m-h40 {
+    line-height: 40px!important;
+  }
+
+  .m-h45 {
+    line-height: 45px!important;
+  }
+
+  .m-h50 {
+    line-height: 50px!important;
+  }
+
+  .m-h55 {
+    line-height: 55px!important;
+  }
+
+  .m-h64 {
+    line-height: 64px!important;
+  }
+}
+</style>
+   </head>
+   <body style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; margin: 0 auto; padding: 0; height: 100%; width: 100%;">
+      <div style="display:none;">
+        We hope you’re as excited as we are! 
+         <!-- hidden preheaders. Preheader spacing hack = &#847;  -->
+         &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847;
+      </div>
+      <div id="body-fix" role="article" aria-roledescription="email" aria-label="email name" lang="en" style="box-sizing: border-box; width: 100%; font-size: 16px; font-size: 1rem; font-size: max(16px, 1rem);">
+         <!--[if (gte mso 9) | IE]>
+         <table align="center" width="600" style="margin-left:auto; margin-right:auto;" >
+            <tr>
+               <td>
+                  <![endif]-->
+                  <table class="body"  width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; max-width: 600px; margin-left: auto; margin-right: auto; margin-top: 30px; mso-table-lspace: 0; mso-table-rspace: 0;">
+                     
+                     <!-- Logo start -->
+                     <tr>
+                        <td class="teal-bg white f35" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; color: #ffffff; background-color: #00BCB2; background: #00BCB2; font-size: 35px;" bgcolor="#00BCB2">
+                           <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
+                              <tr>
+                                <td class="center montserrat f35" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; font-size: 35px; border-bottom: 1px white solid; padding-top: 15px;" align="center">
+                                  <img src="http://seanmun.com/now/images/Nowadays_Logo_White.png" alt="Nowadays" width="150" style="max-width: 100%; margin: 0; padding: 0; -ms-interpolation-mode: bicubic;">
+                                </td>
+                            </tr>
+                            <tr>
+                              <td class="center" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center;" align="center">
+                                <img src="http://seanmun.com/now/images/nugs.png" alt="nuggets!" style="max-width: 100%; margin: 0; padding: 0; -ms-interpolation-mode: bicubic;">
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class=" montserrat f35 center logo" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; padding: 30px 0 30px 0; font-size: 35px;" align="center">
+                                You made our day!
+                              </td>
+                            </tr>
+                           </table>
+                        </td>
+                     </tr>
+                     <!-- Logo end -->
+                     
+                   
+                     <!-- Message Start -->
+                    <tr>
+                        <td class="white-bg dark box25" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; color: #333F48; background-color: #ffffff; background: #ffffff; padding: 25px;" bgcolor="#ffffff">
+                           <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
+                              <tr>
+                                <td class="radomir f16 h20 left" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: left; font-family: 'Radomir', Arial, sans-serif; font-size: 16px; line-height: 20px;" align="left">
+                                  Hi {{ customer.first_name }},<br><br>
+                                  Time to break out your best happy dance (which may or may not involve a cartwheel) — our nuggets are on their way to your doorstep! 
+                                  <br><br>
+                                  If you want to elevate your plate beyond a ketchup pairing, check out our recipes and stock your pantry in time to make a Caesar wrap, buffalo bites, or even chicken & waffles (our favorite).
+                                  
+                                  <br><br>
+                                  Happy indulging,<br>
+                                  Max & Dominik
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="logo" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; padding: 30px 0 30px 0;">
+                                  <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
+                                    <tr>
+                                      <td class="montserrat f16 h20 left" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: left; font-family: 'Montserrat', Arial, sans-serif; font-size: 16px; line-height: 20px;" align="left">
+                                       <!-- must nest inside a table,tr,td to position -->
+                                      <a href="{{ order_status_url }}" class="btn blue-bg white montserrat f12 h16 bold center" style="text-align: center; font-weight: 700; font-family: 'Montserrat', Arial, sans-serif; color: #ffffff; background-color: #1990C6; background: #1990C6; font-size: 12px; text-decoration: none; padding: 7px 5px; display: inline-block; mso-padding-alt: 0; width: 170px;">
+                                        <!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%;mso-text-raise:30pt">&nbsp;</i><![endif]-->
+                                        <span style="mso-text-raise:15pt;">TRACK YOUR ORDER</span>
+                                        <!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%">&nbsp;</i><![endif]-->
+                                      </a></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                     <!-- Message end -->
+
+                    <!-- CTA Start -->
+                     <tr class="module-1-column">
+                        <td class="box25 white-bg" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; background-color: #ffffff; background: #ffffff; padding: 25px;" bgcolor="#ffffff">
+                           <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
+                              <tr>
+                                <td style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;">
+                                  <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
+                                    <tr>
+                                      <td class="white center montserrat f24 h35 bold" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-weight: 700; font-family: 'Montserrat', Arial, sans-serif; color: #48D597; font-size: 24px;" align="center">
+                                       Evaluate Your Plate
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="white center montserrat f14 h20" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; color: #48D597; font-size: 14px; line-height: 20px;" align="center"> 
+                                       Mouthwatering recipes for every level of indulgance<br><br>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                        <td class="" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;">
+                           <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
+                             <tr>
+                               
+                               
+                               <td style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; max-width: 150px;" class="center" align="center">
+                                <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" align="center" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
+                                   <tr>
+                                     <td class="montserrat f13 h16 center yellow" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; color: #48D597; font-size: 13px;" align="center">
+                                       <img src="http://seanmun.com/now/images/shipping.png" alt="Shipping" width="150" style="max-width: 100%; margin: 0; padding: 0; -ms-interpolation-mode: bicubic;">
+                                     </td>
+                                   </tr>
+                                   <tr>
+                                     <td class="montserrat f13 h16 center white" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; color: #48D597; font-size: 13px; padding-top: 7px;" align="center">
+                                     Free 2-Day<br> Shipping
+                                     </td>
+                                   </tr>
+                               </table>
+                              </td>
+
+                               <td style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; max-width: 150px;" class="center" align="center">
+                                <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" align="center" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
+                                   <tr>
+                                     <td class="montserrat f13 h16 center yellow" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; color: #48D597; font-size: 13px;" align="center">
+                                       <img src="http://seanmun.com/now/images/shipping.png" alt="Shipping" width="150" style="max-width: 100%; margin: 0; padding: 0; -ms-interpolation-mode: bicubic;">
+                                     </td>
+                                   </tr>
+                                   <tr>
+                                     <td class="montserrat f13 h16 center white" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; color: #48D597; font-size: 13px; padding-top: 7px;" align="center">
+                                     Free 2-Day<br> Shipping
+                                     </td>
+                                   </tr>
+                               </table>
+                              </td>
+                             </tr>
+                           </table>
+                        </td>
+                     </tr>
+                              <tr>
+                                <td style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;">
+                                  <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
+                                    <tr>
+                                      <td class="center" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center;" align="center"><br>
+                                        <!-- must nest inside a table,tr,td to position -->
+                                      <a href="https://eat-nowadays.myshopify.com/blogs/recipes" class="btn white-bg green montserrat f16 h16 bold" style="font-weight: 700; font-family: 'Montserrat', Arial, sans-serif; color: #ffffff; background-color: #48D597; background: #48D597; font-size: 16px; text-decoration: none; padding: 7px 5px; display: inline-block; mso-padding-alt: 0; width: 170px;">
+                                          <!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%;mso-text-raise:30pt">&nbsp;</i><![endif]-->
+                                          <span style="mso-text-raise:15pt;"> SEE ALL RECIPES &#x2794;</span>
+                                          <!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%">&nbsp;</i><![endif]-->
+                                      </a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                     <!-- CTA End -->
+                  
+              
+                     <!-- Order Deails start -->
+                     <tr class="module-1-column">
+                        <td class="white-bg" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; background-color: #ffffff; background: #ffffff;" bgcolor="#ffffff">
+                             <!-- Hero -->
+                             <table class="row content">
+                                <tr>
+                                  <td class="content__cell">
+                                    <center>
+                                      <table class="container">
+                                        <tr>
+                                          <td>
+                              
+                                          {% if fulfillment.tracking_numbers.size > 0 %}
+                                <p class="disclaimer__subtext">
+                                  <br/>
+                                  {% if fulfillment.tracking_numbers.size == 1 and fulfillment.tracking_company and fulfillment.tracking_url %}
+                                    {{ fulfillment.tracking_company }} tracking number: <a href="{{ fulfillment.tracking_url }}">{{ fulfillment.tracking_numbers.first }}</a>
+                                  {% elsif fulfillment.tracking_numbers.size == 1 %}
+                                    Tracking number: {{ fulfillment.tracking_numbers.first }}
+                                  {% else %}
+                                    Tracking numbers:<br />
+                                    {% for tracking_number in fulfillment.tracking_numbers %}
+                                      {{ tracking_number }}<br />
+                                    {% endfor %}
+                                  {% endif %}
+                                </p>
+                              {% endif %}
+                              
+                              
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </center>
+                                  </td>
+                                </tr>
+                              </table>
+
+                           
+                              
+                                        <table class="row section">
+                                <tr>
+                                  <td class="section__cell">
+                                    <center>
+                                      <table class="container">
+                                        <tr>
+                                          <td>
+                                            <h3>Items in this shipment</h3>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                      <table class="container">
+                                        <tr>
+                                          <td>
+                                            
+                                          
+                              <table class="row">
+                                {% for line in fulfillment.fulfillment_line_items %}
+                                <tr class="order-list__item">
+                                  <td class="order-list__item__cell">
+                                    <table>
+                                      <td>
+                                        {% if line.line_item.image %}
+                                          <img src="{{ line.line_item | img_url: 'compact_cropped' }}" align="left" width="60" height="60" class="order-list__product-image"/>
+                                        {% endif %}
+                                      </td>
+                                      <td class="order-list__product-description-cell">
+                                        {% if line.line_item.product.title %}	
+                                          {% assign line_title = line.line_item.product.title %}	
+                                        {% else %}	
+                                          {% assign line_title = line.line_item.title %}	
+                                        {% endif %}
+                              
+                                        {% if line.quantity < line.line_item.quantity %}
+                                          {% capture line_display %} {{ line.quantity }} of {{ line.line_item.quantity }} {% endcapture %}
+                                        {% else %}
+                                          {% assign line_display = line.line_item.quantity  %}
+                                        {% endif %}
+                              
+                                        <span class="order-list__item-title">{{ line_title }} × {{ line_display }}</span><br/>
+                              
+                                        {% if line.line_item.variant.title != 'Default Title' %}
+                                          <span class="order-list__item-variant">{{ line.line_item.variant.title }}</span><br/>
+                                        {% endif %}
+                              
+                                        {% if line.line_item.selling_plan_allocation %}
+                                          <span class="order-list__item-variant">{{ line.line_item.selling_plan_allocation.selling_plan.name }}</span><br/>
+                                        {% endif %}
+                              
+                                        {% if line.line_item.refunded_quantity > 0 %}
+                                          <span class="order-list__item-refunded">Refunded</span>
+                                        {% endif %}
+                              
+                                        {% if line.line_item.discount_allocations %}
+                                          {% for discount_allocation in line.line_item.discount_allocations %}
+                                            {% if discount_allocation.discount_application.target_selection != 'all' %}
+                                              <span class="order-list__item-discount-allocation">
+                                                <img src="{{ 'notifications/discounttag.png' | shopify_asset_url }}" width="18" height="18" class="discount-tag-icon" />
+                                                <span>
+                                                  {{ discount_allocation.discount_application.title | upcase }}
+                                                  (-{{ discount_allocation.amount | money }})
+                                                </span>
+                                              </span>
+                                            {% endif %}
+                                          {% endfor %}
+                                        {% endif %}
+                                      </td>
+                                    </table>
+                                  </td>
+                                </tr>{% endfor %}
+                              </table>
+                              
+                              
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </center>
+                                  </td>
+                                </tr>
+                              </table>
+                              
+                                        <table class="row footer">
+                                <tr>
+                                  <td class="footer__cell">
+                                    <center>
+                                      <table class="container">
+                                        <tr>
+                                          <td>
+                                            
+                                            <p class="disclaimer__subtext">If you have any questions, reply to this email or contact us at <a href="mailto:{{ shop.email }}">{{ shop.email }}</a></p>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </center>
+                                  </td>
+                                </tr>
+                              </table>
+    
+       
+                          
+                        </td>
+                     </tr>
+                     <!-- Order Deails End -->
+
+                     <!-- Footer Start -->
+                    <tr>
+                        <td class="teal-bg dark box25" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; color: #333F48; background-color: #00BCB2; background: #00BCB2; padding: 25px;" bgcolor="#00BCB2">
+                           <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
+                             <tr>
+                               <td style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; max-width: 150px;" class="center" align="center">
+                                 <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" align="center" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
+                                    <tr>
+                                      <td class="montserrat f13 h16 center yellow" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; color: #FFC845; font-size: 13px;" align="center">
+                                        <img src="http://seanmun.com/now/images/happy.png" alt="happy" width="75" style="max-width: 100%; margin: 0; padding: 0; -ms-interpolation-mode: bicubic;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="montserrat f13 h16 center white" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; color: #ffffff; font-size: 13px; padding-top: 7px;" align="center">
+                                      Happiness<br> Guaranteed
+                                      </td>
+                                    </tr>
+                                </table>
+                               </td>
+                               
+                               <td style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; max-width: 150px;" class="center" align="center">
+                                 <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" align="center" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
+                                    <tr>
+                                      <td class="montserrat f13 h16 center yellow" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; color: #FFC845; font-size: 13px;" align="center">
+                                        <img src="http://seanmun.com/now/images/shipping.png" alt="Shipping" width="75" style="max-width: 100%; margin: 0; padding: 0; -ms-interpolation-mode: bicubic;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="montserrat f13 h16 center white" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; color: #ffffff; font-size: 13px; padding-top: 7px;" align="center">
+                                      Free 2-Day<br> Shipping
+                                      </td>
+                                    </tr>
+                                </table>
+                               </td>
+
+                               <td style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; max-width: 150px;" class="center" align="center">
+                                 <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" align="center" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
+                                    <tr>
+                                      <td class="montserrat f13 h16 center yellow" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; color: #FFC845; font-size: 13px;" align="center">
+                                        <img src="http://seanmun.com/now/images/plant.png" alt="plant" width="75" style="max-width: 100%; margin: 0; padding: 0; -ms-interpolation-mode: bicubic;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="montserrat f13 h16 center white" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; color: #ffffff; font-size: 13px; padding-top: 7px;" align="center">
+                                      100%<br> Plant-Based
+                                      </td>
+                                    </tr>
+                                </table>
+                               </td>
+
+                               <td style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; max-width: 150px;" class="center" align="center">
+                                 <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" align="center" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
+                                    <tr>
+                                      <td class="montserrat f13 h16 center yellow" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; color: #FFC845; font-size: 13px;" align="center">
+                                        <img src="http://seanmun.com/now/images/banned.png" alt="X" width="75" style="max-width: 100%; margin: 0; padding: 0; -ms-interpolation-mode: bicubic;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="montserrat f13 h16 center white" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; color: #ffffff; font-size: 13px; padding-top: 7px;" align="center">
+                                      Soy-Free &<br> Non-GMO
+                                      </td>
+                                    </tr>
+                                </table>
+                               </td>
+                               
+                             </tr>
+                           </table>
+                        </td>
+                     </tr>
+                     <!-- Footer end -->
+                      
+                  </table>
+                  <!--[if mso]>
+               </td>
+            </tr>
+         </table>
+         <![endif]-->
+      </div>
+      <!-- Litmus Script Here -->
+   </body>
+</html>
