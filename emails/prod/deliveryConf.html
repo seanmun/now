@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; background: #abaaaa; margin: 0 auto; padding: 0; height: 100%; width: 100%;">
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; background: #e7e7e7; margin: 0 auto; padding: 0; height: 100%; width: 100%;">
    <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
       <meta name="x-apple-disable-message-reformatting">
           <link rel="stylesheet" type="text/css" href="/assets/notifications/styles.css">
 
-      <title>Thank you for your order {{ order_name }} </title>
+      <title>Knock knock, we’re here!  </title>
       <!--[if mso]>
       <o:OfficeDocumentSettings>
          <o:AllowPNG/>
@@ -320,21 +320,27 @@ a:hover {
   .m-h64 {
     line-height: 64px!important;
   }
+  .mobileImg {
+           max-width: 125px!important;
+         }
+         .body {
+           margin-top: 0px!important;
+           }
 }
 
 .button__cell { background: {{ shop.email_accent_color }}; }
     a, a:hover, a:active, a:visited { color: {{ shop.email_accent_color }}; }
 </style>
    </head>
-   <body style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; margin: 0 auto; padding: 0; height: 100%; width: 100%;">
+   <body style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; margin: 0 auto; padding: 0; height: 100%; width: 100%;background-color: #e7e7e7;background: #e7e7e7;" bgcolor="#e7e7e7;">
       <div style="display:none;">
         Crispy golden nuggets ready to rock your socks off
 
          <!-- hidden preheaders. Preheader spacing hack = &#847;  -->
          &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847;
       </div>
-      <div id="body-fix" role="article" aria-roledescription="email" aria-label="email name" lang="en" style="box-sizing: border-box; width: 100%; font-size: 16px; font-size: 1rem; font-size: max(16px, 1rem);">
-         <!--[if (gte mso 9) | IE]>
+      <div id="body-fix" role="article" aria-roledescription="email" aria-label="email name" lang="en" style="box-sizing: border-box; width: 100%; font-size: 16px; font-size: 1rem; font-size: max(16px, 1rem);background-color: #e7e7e7;background: #e7e7e7;" bgcolor="#e7e7e7;">
+        <!--[if (gte mso 9) | IE]>
          <table align="center" width="600" style="margin-left:auto; margin-right:auto;" >
             <tr>
                <td>
@@ -343,11 +349,11 @@ a:hover {
                      
                      <!-- Logo start -->
                      <tr>
-                        <td class="teal-bg white f35" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; color: #ffffff; background-color: #00BCB2; background: #00BCB2; font-size: 35px;" bgcolor="#00BCB2">
+                        <td class="teal-bg white f35" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; color: #ffffff; background-color: #0BC0B3; background: #0BC0B3; font-size: 35px;" bgcolor="#0BC0B3">
                            <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
                               <tr>
-                                <td class="center montserrat f35" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; font-size: 35px; border-bottom: 1px white solid; padding-top: 15px;" align="center">
-                                  <img src="http://seanmun.com/now/images/Nowadays_Logo_White.png" alt="Nowadays" width="150" style="max-width: 100%; margin: 0; padding: 0; -ms-interpolation-mode: bicubic;">
+                                <td class="center montserrat f35" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; font-size: 35px; padding-top: 15px;" align="center">
+                                  <img src="https://cdn.shopify.com/s/files/1/0530/9120/5302/files/logo_white.png?v=1617137077" alt="Nowadays" width="150" style="max-width: 100%; margin: 0; padding: 0; -ms-interpolation-mode: bicubic;">
                                 </td>
                             </tr>
                             <tr>
@@ -414,6 +420,40 @@ a:hover {
                                   </td>
                               </tr>
                            </table>
+
+                           <table class="row content">
+                            <tr>
+                              <td class="content__cell">
+                                <center>
+                                  <table class="container">
+                                    <tr>
+                                      <td>
+                                        
+                                     
+                                      {% if fulfillment.tracking_numbers.size > 0 %}
+                            <p class="disclaimer__subtext">
+                              <br/>
+                              {% if fulfillment.tracking_numbers.size == 1 and fulfillment.tracking_company and fulfillment.tracking_url %}
+                                {{ fulfillment.tracking_company }} tracking number: <a href="{{ fulfillment.tracking_url }}">{{ fulfillment.tracking_numbers.first }}</a>
+                              {% elsif fulfillment.tracking_numbers.size == 1 %}
+                                Tracking number: {{ fulfillment.tracking_numbers.first }}
+                              {% else %}
+                                Tracking numbers:<br />
+                                {% for tracking_number in fulfillment.tracking_numbers %}
+                                  {{ tracking_number }}<br />
+                                {% endfor %}
+                              {% endif %}
+                            </p>
+                          {% endif %}
+                          
+                          
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </center>
+                              </td>
+                            </tr>
+                          </table>
                         </td>
                      </tr>
                      <!-- Message end -->
@@ -439,39 +479,7 @@ a:hover {
                         <td class="white-bg" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; background-color: #ffffff; background: #ffffff;" bgcolor="#ffffff">
                       
                               
-                                        <table class="row content">
-                                <tr>
-                                  <td class="content__cell">
-                                    <center>
-                                      <table class="container">
-                                        <tr>
-                                          <td>
-                                            
-                                         
-                                          {% if fulfillment.tracking_numbers.size > 0 %}
-                                <p class="disclaimer__subtext">
-                                  <br/>
-                                  {% if fulfillment.tracking_numbers.size == 1 and fulfillment.tracking_company and fulfillment.tracking_url %}
-                                    {{ fulfillment.tracking_company }} tracking number: <a href="{{ fulfillment.tracking_url }}">{{ fulfillment.tracking_numbers.first }}</a>
-                                  {% elsif fulfillment.tracking_numbers.size == 1 %}
-                                    Tracking number: {{ fulfillment.tracking_numbers.first }}
-                                  {% else %}
-                                    Tracking numbers:<br />
-                                    {% for tracking_number in fulfillment.tracking_numbers %}
-                                      {{ tracking_number }}<br />
-                                    {% endfor %}
-                                  {% endif %}
-                                </p>
-                              {% endif %}
-                              
-                              
-                                          </td>
-                                        </tr>
-                                      </table>
-                                    </center>
-                                  </td>
-                                </tr>
-                              </table>
+                                        
                               
                                         <table class="row section">
                                 <tr>
@@ -554,24 +562,7 @@ a:hover {
                                 </tr>
                               </table>
                               
-                                        <table class="row footer">
-                                <tr>
-                                  <td class="footer__cell">
-                                    <center>
-                                      <table class="container">
-                                        <tr>
-                                          <td>
-                                            
-                                            <p class="disclaimer__subtext">If you have any questions, reply to this email or contact us at <a href="mailto:{{ shop.email }}">{{ shop.email }}</a></p>
-                                          </td>
-                                        </tr>
-                                      </table>
-                                    </center>
-                                  </td>
-                                </tr>
-                              </table>
-                              
-                              <img src="{{ 'notifications/spacer.png' | shopify_asset_url }}" class="spacer" height="1" />
+                                       
                            
        
                           
@@ -588,7 +579,7 @@ a:hover {
                                  <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" align="center" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
                                     <tr>
                                       <td class="montserrat f13 h16 center yellow" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; color: #FFC845; font-size: 13px;" align="center">
-                                        <img src="http://seanmun.com/now/images/happy.png" alt="happy" width="75" style="max-width: 100%; margin: 0; padding: 0; -ms-interpolation-mode: bicubic;">
+                                        <img src="https://cdn.shopify.com/s/files/1/0530/9120/5302/files/happy.png?v=1620224484" alt="happy" width="75" style="max-width: 100%; margin: 0; padding: 0; -ms-interpolation-mode: bicubic;">
                                       </td>
                                     </tr>
                                     <tr>
@@ -603,7 +594,7 @@ a:hover {
                                  <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" align="center" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
                                     <tr>
                                       <td class="montserrat f13 h16 center yellow" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; color: #FFC845; font-size: 13px;" align="center">
-                                        <img src="http://seanmun.com/now/images/shipping.png" alt="Shipping" width="75" style="max-width: 100%; margin: 0; padding: 0; -ms-interpolation-mode: bicubic;">
+                                        <img src="https://cdn.shopify.com/s/files/1/0530/9120/5302/files/shipping.png?v=1620224484" alt="Shipping" width="75" style="max-width: 100%; margin: 0; padding: 0; -ms-interpolation-mode: bicubic;">
                                       </td>
                                     </tr>
                                     <tr>
@@ -618,7 +609,7 @@ a:hover {
                                  <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" align="center" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
                                     <tr>
                                       <td class="montserrat f13 h16 center yellow" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; color: #FFC845; font-size: 13px;" align="center">
-                                        <img src="http://seanmun.com/now/images/plant.png" alt="plant" width="75" style="max-width: 100%; margin: 0; padding: 0; -ms-interpolation-mode: bicubic;">
+                                        <img src="https://cdn.shopify.com/s/files/1/0530/9120/5302/files/plant.png?v=1620224484" alt="plant" width="75" style="max-width: 100%; margin: 0; padding: 0; -ms-interpolation-mode: bicubic;">
                                       </td>
                                     </tr>
                                     <tr>
@@ -633,7 +624,7 @@ a:hover {
                                  <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" align="center" style="border-collapse: collapse; mso-cellspacing: 0; mso-padding-alt: 0; mso-table-lspace: 0; mso-table-rspace: 0;">
                                     <tr>
                                       <td class="montserrat f13 h16 center yellow" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center; font-family: 'Montserrat', Arial, sans-serif; color: #FFC845; font-size: 13px;" align="center">
-                                        <img src="http://seanmun.com/now/images/banned.png" alt="X" width="75" style="max-width: 100%; margin: 0; padding: 0; -ms-interpolation-mode: bicubic;">
+                                        <img src="https://cdn.shopify.com/s/files/1/0530/9120/5302/files/banned.png?v=1620224484" alt="X" width="75" style="max-width: 100%; margin: 0; padding: 0; -ms-interpolation-mode: bicubic;">
                                       </td>
                                     </tr>
                                     <tr>
@@ -649,8 +640,24 @@ a:hover {
                         </td>
                      </tr>
                      <!-- Footer end -->
-                      
+                     <tr>
+                      <td class="section__cell" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; background-color: #ffffff; background: #ffffff;" bgcolor="#ffffff">
+                         <center>
+                            <table class="container">
+                               <tr>
+                                  <td>
+                                     <p class="disclaimer__subtext">If you have any questions, reply to this email or contact us at <a href="mailto:{{ shop.email }}">{{ shop.email }}</a></p>
+                                  </td>
+                               </tr>
+                            </table>
+                         </center>
+                      </td>
+                   </tr>
                   </table>
+
+                 
+                  
+                  <img src="{{ 'notifications/spacer.png' | shopify_asset_url }}" class="spacer" height="1" />
                   <!--[if mso]>
                </td>
             </tr>
