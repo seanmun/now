@@ -337,40 +337,7 @@
                         </td>
                      </tr>
                      <!-- Message end -->
-                     <tr class="module-1-column">
-                        <td class="white-bg" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; background-color: #ffffff; background: #ffffff;" bgcolor="#ffffff">
-                           <!-- Hero -->
-                           <table class="row content">
-                              <tr>
-                                 <td class="section__cell" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;padding-top: 0px;">
-                                    <center>
-                                       <table class="container">
-                                          <tr>
-                                             <td style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;">
-                                                {% if fulfillment.tracking_numbers.size > 0 %}
-                                                <p class="disclaimer__subtext">
-                                                   <br/>
-                                                   {% if fulfillment.tracking_numbers.size == 1 and fulfillment.tracking_company and fulfillment.tracking_url %}
-                                                   {{ fulfillment.tracking_company }} tracking number: <a href="{{ fulfillment.tracking_url }}">{{ fulfillment.tracking_numbers.first }}</a>
-                                                   {% elsif fulfillment.tracking_numbers.size == 1 %}
-                                                   Tracking number: {{ fulfillment.tracking_numbers.first }}
-                                                   {% else %}
-                                                   Tracking numbers:<br />
-                                                   {% for tracking_number in fulfillment.tracking_numbers %}
-                                                   {{ tracking_number }}<br />
-                                                   {% endfor %}
-                                                   {% endif %}
-                                                </p>
-                                                {% endif %}
-                                             </td>
-                                          </tr>
-                                       </table>
-                                    </center>
-                                 </td>
-                              </tr>
-                           </table>
-                        </td>
-                     </tr>
+                  
                      <!-- CTA Start -->
                      <tr class="module-1-column">
                         <td class="box25 white-bg" style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; background-color: #48D597; background: #48D597; padding: 25px;" bgcolor="#48D597">
